@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.foodloop</groupId>
-	<artifactId>FoodLoop</artifactId>
+	<artifactId>s3uploader</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>FoodLoop</name>
 	<description>SurplusFoodManagementSystem</description>
@@ -92,6 +92,21 @@
 			<artifactId>guava</artifactId>
 			<version>33.3.1-jre</version>
 		</dependency>
+
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>s3</artifactId>
+			<version>2.32.23</version>
+		</dependency>
+
+
+		<!-- Spring Cloud AWS for S3 -->
+<!--		<dependency>-->
+<!--			<groupId>io.awspring.cloud</groupId>-->
+<!--			<artifactId>spring-cloud-aws-starter-s3</artifactId>-->
+<!--			<version>3.1.1</version>-->
+<!--		</dependency>-->
+
 	</dependencies>
 
 	<build>
@@ -122,7 +137,7 @@
 		</plugins>
 
 		<finalName>
-			foodloop
+			s3uploader
 		</finalName>
 	</build>
 

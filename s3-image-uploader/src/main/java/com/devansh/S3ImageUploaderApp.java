@@ -6,10 +6,10 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 @SpringBootApplication
 @EnableAsync
-public class FoodLoopApplication {
+public class S3ImageUploaderApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FoodLoopApplication.class, args);
+		SpringApplication.run(S3ImageUploaderApp.class, args);
 	}
 
 }

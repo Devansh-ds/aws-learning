@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 
+import java.awt.*;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 
@@ -69,4 +70,15 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(response, HttpStatus.CONFLICT);
     }
 
+
+    @ExceptionHandler(ImageUploaderException.class)
+    public ResponseEntity<ErrorResponse> handleImageException(ImageUploaderException e, WebRequest request) {
+        ErrorResponse response = ErrorResponse
+                .builder()
+                .errorMessage(e.getMessage())
+                .timestamp(LocalDateTime.now())
+                .endpoint(request.getDescription(false).replace("uri=", ""))
+                .build();
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    }
 }

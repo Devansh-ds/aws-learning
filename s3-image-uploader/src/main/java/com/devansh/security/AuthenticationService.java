@@ -10,7 +10,7 @@ import com.devansh.model.User;
 import com.devansh.repo.UserRepository;
 import com.devansh.request.*;
 import com.devansh.response.AuthenticationResponse;
-import com.devansh.service.EmailService;
+import com.devansh.service.impl.EmailService;
 import com.google.common.cache.LoadingCache;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;

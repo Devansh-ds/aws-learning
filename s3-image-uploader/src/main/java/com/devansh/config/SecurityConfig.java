@@ -39,8 +39,8 @@ public class SecurityConfig {
                 .csrf(CsrfConfigurer::disable)
                 .authorizeHttpRequests(
                         authorize -> authorize
-                                .requestMatchers("/auth/**")
-                                .permitAll()
+                                .requestMatchers("/auth/**").permitAll()
+                                .requestMatchers("/images/**").permitAll()
 
                                 .requestMatchers("/admin/**").hasRole(Role.USER.name())
 

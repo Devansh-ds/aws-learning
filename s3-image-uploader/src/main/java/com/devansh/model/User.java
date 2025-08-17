@@ -27,14 +27,9 @@ public class User implements UserDetails {
     private String email;
     private String password;
 
-    private String phoneNumber;
-    private String address;
     private String fullname;
+
     private String profilePicture;
-
-
-    @Enumerated(EnumType.STRING)
-    private UserType userType;
 
     private LocalDateTime createdAt;
 

@@ -1,4 +1,4 @@
-package com.devansh.service;
+package com.devansh.service.impl;
 
 import com.devansh.two_factor_auth.EmailConfigurationProperties;
 import lombok.RequiredArgsConstructor;
