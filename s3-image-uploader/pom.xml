@@ -11,7 +11,7 @@
 	<groupId>com.foodloop</groupId>
 	<artifactId>s3uploader</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>FoodLoop</name>
+	<name>Image-Docs-Storage</name>
 	<description>SurplusFoodManagementSystem</description>
 	<url/>
 	<licenses>
@@ -99,13 +99,6 @@
 			<version>2.32.23</version>
 		</dependency>
 
-
-		<!-- Spring Cloud AWS for S3 -->
-<!--		<dependency>-->
-<!--			<groupId>io.awspring.cloud</groupId>-->
-<!--			<artifactId>spring-cloud-aws-starter-s3</artifactId>-->
-<!--			<version>3.1.1</version>-->
-<!--		</dependency>-->
 
 	</dependencies>
 

@@ -1,4 +1,4 @@
-package com.devansh.config;
+package com.devansh.config.security;
 
 import com.devansh.model.Role;
 import org.springframework.context.annotation.Bean;
@@ -40,7 +40,6 @@ public class SecurityConfig {
                 .authorizeHttpRequests(
                         authorize -> authorize
                                 .requestMatchers("/auth/**").permitAll()
-                                .requestMatchers("/images/**").permitAll()
 
                                 .requestMatchers("/admin/**").hasRole(Role.USER.name())
 

@@ -1,6 +1,6 @@
 package com.devansh.security;
 
-import com.devansh.config.JwtService;
+import com.devansh.config.security.JwtService;
 import com.devansh.exception.OtpException;
 import com.devansh.exception.TokenInvalidException;
 import com.devansh.exception.UserAlreadyExistException;
@@ -51,7 +51,6 @@ public class AuthenticationService {
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .role(request.getRole())
-                .createdAt(LocalDateTime.now())
                 .isEmailVerified(false)
                 .build();
 
@@ -116,7 +115,6 @@ public class AuthenticationService {
                         .email((String) data.get("email"))
                         .password((String) data.get("password"))
                         .role((Role) data.get("role"))
-                        .createdAt(LocalDateTime.now())
                         .isEmailVerified(true)
                         .build();
                 user = userRepository.save(user);

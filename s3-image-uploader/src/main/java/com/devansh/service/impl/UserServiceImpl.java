@@ -1,6 +1,6 @@
 package com.devansh.service.impl;
 
-import com.devansh.config.JwtService;
+import com.devansh.config.security.JwtService;
 import com.devansh.exception.UserException;
 import com.devansh.model.User;
 import com.devansh.repo.UserRepository;

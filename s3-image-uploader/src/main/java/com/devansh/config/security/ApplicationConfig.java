@@ -1,4 +1,4 @@
-package com.devansh.config;
+package com.devansh.config.security;
 
 
 import com.devansh.repo.UserRepository;

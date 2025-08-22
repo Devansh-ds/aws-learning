@@ -6,6 +6,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
@@ -31,8 +32,6 @@ public class User implements UserDetails {
 
     private String profilePicture;
 
-    private LocalDateTime createdAt;
-
     @Column(name = "email_verified")
     private boolean isEmailVerified;
 
@@ -48,6 +47,18 @@ public class User implements UserDetails {
     public String getUsername() {
         return email;
     }
+
+    // file storage for s3
+
+    // Max quota allowed (50 MB = 50 * 1024 * 1024 bytes)
+    private long storageQuota = 50 * 1024 * 1024;
+
+    // Used storage in bytes
+    private long usedStorage = 0;
+
+    private int dailyUploadCount = 0;
+
+    private LocalDate lastUploadDate;
 
 
 }

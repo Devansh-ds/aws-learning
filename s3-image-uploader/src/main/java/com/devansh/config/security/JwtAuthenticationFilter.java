@@ -1,4 +1,4 @@
-package com.devansh.config;
+package com.devansh.config.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

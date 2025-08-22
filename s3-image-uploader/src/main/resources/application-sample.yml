@@ -27,6 +27,11 @@ spring:
           connectiontimeout: 5000
           timeout: 5000
           writetimeout: 5000
+  servlet:
+    multipart:
+      max-file-size: 4MB
+      max-request-size: 4MB
+
 
 application:
   security:
@@ -41,3 +46,16 @@ two:
     auth:
       otp:
         expiration-minutes: 5          # OTP valid for 5 minutes
+
+cloud:
+  aws:
+    credentials:
+      access-key: your-access-key-of-bucket
+      secret-key: your-secret-key-of-bucket
+    region:
+      static: your-region
+    stack:
+      auto: false
+app:
+  s3:
+    bucket: your-s3-bucket-name
