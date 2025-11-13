@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/Ec2DeploySpring/pom.xml" />
         <option value="$PROJECT_DIR$/s3-image-uploader/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-aws-deploy-demo/pom.xml" />
       </list>
     </option>
   </component>
