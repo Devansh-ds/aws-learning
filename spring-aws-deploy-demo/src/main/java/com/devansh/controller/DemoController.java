@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
 
-    private int counter;
+    private int counter = 0;
 
     @GetMapping("/demo")
     public String demo() {
